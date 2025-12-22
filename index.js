@@ -1,5 +1,4 @@
-// API 1: "https://jsonplaceholder.typicode.com/users"
-// API 2: "https://jsonplaceholder.typicode.com/posts?userId=:id"
+
     const userListEl = document.querySelector(".user-list");
 
     async function main()  {
@@ -10,11 +9,8 @@
 
 main();
 function showUserPosts(Id) {
-
-    // window.location.href = `${window.location.origin}/user.html`;
-    console.log(window.location);
-  
-    // console.log(userId);
+    localStorage.setItem("Id",Id);
+    window.location.href = `${window.location.origin}/user.html` 
 }
 function userHTML(user) {
     return `<div class="user-card" onclick="showUserPosts(${user.id})">
