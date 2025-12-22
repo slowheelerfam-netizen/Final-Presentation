@@ -2,7 +2,7 @@ const postListEl = document.querySelector('.post-list');
 
 async function main(){
     const id = localStorage.getItem("Id");
-    const posts = await fetch('https://jsonplaceholder.typicode.com/posts?userId=:id')
+    const posts = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
     const postsData = await posts.json();
     console.log(postsData);
 

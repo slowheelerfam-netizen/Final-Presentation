@@ -10,7 +10,7 @@
 main();
 function showUserPosts(Id) {
     localStorage.setItem("Id",Id);
-    window.location.href = `${window.location.origin}/user.html` 
+    window.location.href = `${window.location.href = "user.html"}`;
 }
 function userHTML(user) {
     return `<div class="user-card" onclick="showUserPosts(${user.id})">
