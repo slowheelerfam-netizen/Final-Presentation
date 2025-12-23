@@ -9,8 +9,9 @@
     }  
 
 main()
-function showUserPosts(userId) {
+function showUserPosts(id) {
     window.location.href = `${window.location.origin}/user.html`
+    console.log(window.location.origin);
 }
 function userHTML(user) {
     return `<div class="user-card" onclick="showUserPosts(${user.id})">
