@@ -8,8 +8,7 @@
         userListEl.innerHTML = usersData.map((user) => userHTML(user)).join("");  
     }  
 
-main()
-main()
+main();
 function showUserPosts(id) {
     localStorage.setItem("id", id);
     window.location.href = `${window.location.origin}/user.html`
@@ -22,9 +21,11 @@ function userHTML(user) {
                     <h3>${user.name}</h3>
                     <p><b>Email:</b> ${user.email}</p>
                     <p><b>Phone:</b> ${user.phone}</p>
-                    <p><b>Website:</b> <a href="https://${user.website}" target="_blank">
+                    <p><b>Website:</b> 
+                        <a href="https://${user.website}" target="_blank" onclick="event.stopPropagation()">
                     ${user.website}
-                    </a></p>
+                        </a>
+                    </p>
                 </div>
             </div>`;
 } 

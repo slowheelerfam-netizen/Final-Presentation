@@ -1,5 +1,5 @@
 const postListEl = document.querySelector('.post-list');
-const id = localStorage.getItem('id');
+const id = localStorage.getItem("id");
 
 async function onSearchChange(event){
     const id = event.target.value;
@@ -25,4 +25,4 @@ function postHTML(post) {
     `
     }
  
-renderPosts(userId); 
+renderPosts(); 
